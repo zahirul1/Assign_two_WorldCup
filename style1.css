@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    /* font-size: 35px; */
+
+}
+.container{
+    width:90%;
+    margin: auto;
+
+}
+/* Header section start here */
+
+.header{
+    height: 70vh;
+    background-color: black;
+    border: 1px solid red;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.header__text{
+    width: 50%;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 25px;
+    gap: 20px;
+}
+.header__text-1{
+    font-size: 5vw;
+    
+}
+
+.header__text-2{
+    font-size: 1.3vw;
+    white-space: nowrap;
+    width: 250px; 
+    overflow: hidden;
+    text-overflow: ellipsis;  
+}
+
+.header__text-3 .button{
+    
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    /* transition-duration: 0.4s; */
+    cursor: pointer;
+
+    animation-name: button_color_change;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes button_color_change {
+    0%   {background-color:red; }
+    35%  {background-color:yellow;}
+    50%  {background-color:blue; }
+    75%  {background-color:green; }
+    100% {background-color:red; }
+  }
+
+.header__image{
+    display: flex;
+    background-image: url("./Images/Banner.png");
+    width:50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 10% center ;
+}
+
+/* ------------- */
+
+/* ----Main section start here---- */
+
+.main{
+    /* height: 150vh; */
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    
+}
+.left{
+    width:25%;
+    height: 310px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border:5px solid #c4c4c4; */
+    box-shadow: 1px 3px 2px lightgray;
+    border-radius: 10px 10px 0 0;
+    
+}
+.left_menu {
+    
+    
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    
+    
+    
+}
+
+.right{
+    width:75%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+}
+
+.asidebar{
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 20px 20px;
+    text-align: center;
+    font-weight: 700;
+   
+}
+.asidebar a{
+    text-decoration: none;
+
+    color: black;
+}
+#asidebar_red{
+    background-color: indianred;
+}
+
+
+[class^="box-"] {
+    border:1px solid #c4c4c4; 
+    box-shadow: 1px 3px 2px lightgray; 
+    border-radius: 10px 10px 0 0;
+
+}
+
+
+[class^="box-"] div{
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    gap:15px;
+    border-radius: 10px 10px 0 0;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.box__image, .box__text{
+    height:50%;
+} 
+.box__image img{
+    width:100%; 
+    height:50%;
+    
+}
+
+[class^="box-"] .box__text{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.box__text-1{
+    padding: 4px 20px;
+    font-size: 20px;
+   
+}
+
+.box__text .box__text-2{
+    font-size: 10px;
+
+}
+
+.box__text .box__text-3{
+    font-size: 20px;
+
+}
+
+
+.button1{
+    margin-top: 30px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+.button1 button{
+    background-color: red; 
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+/* Footer Starts here */
+
+.footer{
+    margin-top: 50px;
+    
+    height: 50vh;
+    background-color: black;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.footer_top, .footer_nav{
+    height: 100vh;
+}
+
+.footer_top{
+    display: flex;
+    align-items: center;
+}
+
+hr{
+    height: 7px;
+    background-color: rgb(60, 58, 58);
+    border: none;
+    width: 80%;
+}
+.footer_nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:25px;
+}
+
+
+/* Media Query starts here */
+
+ @media only screen and (max-width: 480px )  {
+
+    
+    .header{
+        
+        width: 100vw;
+    
+        height: 100vh;
+        flex-direction: column;
+        
+        padding: 0;
+       
+    }
+    .header__text{
+        width: 100%;
+        height: 100%;
+        
+        padding: 0px;
+        justify-content: center;
+        align-items:center;
+    
+        
+    }
+
+    .header__image{
+    
+        width: 100%;
+        height: 100%;
+        
+        background-position: 35% center ;
+    }
+
+    .main{
+        
+        flex-direction: column;
+        
+    }
+    .left{
+        width: 80%;
+    }
+
+    .right{
+    width: 80%;
+    grid-template-columns: repeat(1,1fr);
+    }
+
+    .footer{
+        
+        height: 200%;
+    }
+    .footer_nav{
+        flex-direction: column;
+    }
+
+   
+}
+
+
+
+ @media only screen and (min-width: 481px ) and (max-width: 792px )  {
+
+    
+    .header{
+        
+        width: 100vw;
+       
+        height: 100vh;
+        flex-direction: column;
+        padding: 0;   
+    }
+    
+.header__text{
+        width: 100%;
+        height: 100%;
+        
+        padding: 0px;
+        justify-content: center;
+        align-items:center;        
+    }
+
+.header__image{
+    
+        width: 100%;
+        height: 100%;
+        
+        background-position: 35% center 
+}
+
+    
+
+.main{
+        
+        flex-direction: column; 
+    }
+
+.left{
+        width: 100%;
+    }
+
+.left_menu{
+        width: 100%;
+        
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+    }
+.asidebar{
+        width:200px;
+    }
+
+.right{
+    width: 100%;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.button1{
+
+    display: block;
+}
+
+.footer{
+        
+        height: 200%;
+    }
+
+.footer_nav{
+        flex-direction: column;
+    }
+} 
